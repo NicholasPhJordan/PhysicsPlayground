@@ -13,7 +13,7 @@ public class CannonBall : MonoBehaviour
 
     private Rigidbody _rigidbody = null;
 
-    private void Awake()
+    private void Freeze()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.isKinematic = true;
@@ -21,7 +21,7 @@ public class CannonBall : MonoBehaviour
 
     private void Start() 
     {
-        Awake();
+        Freeze();
     }
 
     // Update is called once per frame
@@ -31,7 +31,6 @@ public class CannonBall : MonoBehaviour
         {
             _rigidbody.isKinematic = false;
             _rigidbody.AddForce(transform.forward * fireForce);
-            _canFire = false;
         }
     }
 }
