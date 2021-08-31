@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    [SerializeField] public float _speed;
-    [SerializeField] public float _jumpStrength;
-    [SerializeField] public float _airControl = 1.0f; 
-    [SerializeField] public float _gravityModifier;
+    [SerializeField] private float _speed;
+    [SerializeField] private float _jumpStrength;
+    [SerializeField] private float _airControl = 1.0f; 
+    [SerializeField] private float _gravityModifier;
 
-    [SerializeField] public Camera _playerCamera;
+    [SerializeField] private Camera _playerCamera;
 
     private CharacterController _controller;
 
