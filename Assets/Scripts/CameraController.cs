@@ -14,9 +14,12 @@ public class CameraController : MonoBehaviour
         //Rotate the camera
         if (Input.GetMouseButton(1))
         {
+            //Store current angles
             Vector3 angles = transform.eulerAngles;
+
+            //Get input
             Vector2 rotation;
-            rotation.x = Input.GetAxis("Mouse Y") * (invertY ? -1: 1);
+            rotation.x = Input.GetAxis("Mouse Y") * (invertY ? -1.0f : 1.0f);
             rotation.y = Input.GetAxis("Mouse X");
 
             //Look up and down by rotating around the X-axis
