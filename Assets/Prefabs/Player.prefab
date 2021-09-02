@@ -94,13 +94,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1fa4a8b32821b4aaf572e6c79c0bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
-  _jumpStrength: 0
+  _speed: 10
+  _jumpStrength: 8
   _airControl: 1
-  _gravityModifier: 0
-  faceWithCamera: 1
+  _gravityModifier: 1
+  faceWithCamera: 0
   _playerCamera: {fileID: 0}
-  _animator: {fileID: 0}
+  _animator: {fileID: 7991041477841249961}
 --- !u!1001 &7991041477850633161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -261,5 +261,10 @@ PrefabInstance:
 --- !u!4 &7991041477850761231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
+  m_PrefabInstance: {fileID: 7991041477850633161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7991041477841249961 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
   m_PrefabInstance: {fileID: 7991041477850633161}
   m_PrefabAsset: {fileID: 0}
