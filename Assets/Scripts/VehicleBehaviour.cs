@@ -14,18 +14,17 @@ public class VehicleBehaviour : MonoBehaviour
     {
         rearLeft = backLeft.motor;
         rearRight = backRight.motor;
+
+        rearLeft.targetVelocity = 0.0f;
+        rearRight.targetVelocity = 0.0f;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+       if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            rearLeft.targetVelocity = -30000;
-            rearRight.targetVelocity = 30000;
-        }
-        else
-        {
-            rearLeft.targetVelocity = 0;
+            rearLeft.targetVelocity = -10000.0f;
+            rearRight.targetVelocity = 10000.0f;
         }
     }
 }

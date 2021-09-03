@@ -1815,6 +1815,9 @@ ModelImporter:
   - first:
       41386430: 2186277476908879412
     second: ImportLogs
+  - first:
+      74: -7384515386811381533
+    second: JUMP00
   externalObjects: {}
   materials:
     materialImportMode: 0
