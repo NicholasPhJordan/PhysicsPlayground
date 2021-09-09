@@ -6,9 +6,13 @@ public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnControllerColliderHit(ControllerColliderHit other)
     {
-        Debug.Log("Die!!");
-        _animator.enabled = false;
+        if(other.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("Die!!");
+            _animator.enabled = false;
+
+        }
     }
 }

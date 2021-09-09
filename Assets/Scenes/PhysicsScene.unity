@@ -206,6 +206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SuSMobile
       objectReference: {fileID: 0}
+    - target: {fileID: 4226932155776040334, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_TagString
+      value: 'Obstacle '
+      objectReference: {fileID: 0}
     - target: {fileID: 5339859179267896316, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -64.5
