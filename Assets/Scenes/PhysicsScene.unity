@@ -292,8 +292,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.26713473, y: -0.1393418, z: 0.03865671, w: 0.95274794}
-  m_LocalPosition: {x: 4.987851, y: 10.256577, z: -24.611643}
+  m_LocalRotation: {x: 0.17717777, y: 0.6851217, z: -0.17749803, w: 0.6838938}
+  m_LocalPosition: {x: -6.2338305, y: 4.4083853, z: 0.27363423}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -546,3 +546,88 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4923557345272974450, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
   m_PrefabInstance: {fileID: 1563779038}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1979954427
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 78932434871745169, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226932155776040334, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_Name
+      value: SusMobile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339859179267896316, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339859179267896316, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339859179267896316, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339859179267896316, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339859179267896316, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339859179267896316, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339859179267896316, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339859179267896316, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339859179267896316, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339859179267896316, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339859179267896316, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766323670570792779, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_Motor.force
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766323670570792779, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_Motor.targetVelocity
+      value: -1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766323670570792779, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_UseMotor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6206954327324041999, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_Motor.force
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6206954327324041999, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_Motor.targetVelocity
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6206954327324041999, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
+      propertyPath: m_UseMotor
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07e9aa01d57a5d44f992317b1ca76bf0, type: 3}
