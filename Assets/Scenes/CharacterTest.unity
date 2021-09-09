@@ -323,6 +323,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6409477355286896402, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
+      propertyPath: _speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409477355286896402, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
+      propertyPath: _jumpStrength
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409477355286896402, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
+      propertyPath: _gravityModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6409477355286896402, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
       propertyPath: _playerCamera
       value: 
       objectReference: {fileID: 2147196445}
