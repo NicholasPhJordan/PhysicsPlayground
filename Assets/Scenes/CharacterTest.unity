@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 123283681}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Killer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,29 +323,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6409477355286896402, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
-      propertyPath: _speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6409477355286896402, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
-      propertyPath: _jumpStrength
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6409477355286896402, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
-      propertyPath: _gravityModifier
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6409477355286896402, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
       propertyPath: _playerCamera
       value: 
       objectReference: {fileID: 2147196445}
-    - target: {fileID: 6409477355286896402, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
-      propertyPath: _animator
-      value: 
-      objectReference: {fileID: 601464842}
-    - target: {fileID: 6409477355286896402, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
-      propertyPath: faceWithCamera
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6506286704054685134, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
       propertyPath: m_Name
       value: Player
@@ -396,11 +376,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
---- !u!95 &601464842 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7991041477841249961, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
-  m_PrefabInstance: {fileID: 601464841}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &884390270
 PrefabInstance:
   m_ObjectHideFlags: 0
