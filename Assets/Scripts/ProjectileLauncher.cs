@@ -6,7 +6,6 @@ public class ProjectileLauncher : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private Rigidbody projectile;
-
     [SerializeField] private float airTime = 2.0f;
 
     private Vector3 _displacement = new Vector3();
@@ -17,7 +16,7 @@ public class ProjectileLauncher : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetMouseButtonDown(0))
         {
             LaunchProjectile();
         }
@@ -28,13 +27,12 @@ public class ProjectileLauncher : MonoBehaviour
         _displacement = target.position - transform.position;
         _acceleration = Physics.gravity;
         _time = airTime;
-
         _initialVelocity = FindInitialVelocity(_displacement, _acceleration, _time);
 
         _finalVelocity = FindFinalVelocity(_initialVelocity, _acceleration, _time);
 
         Rigidbody projectileInstance =  Instantiate(projectile, transform.position, transform.rotation);
-        projectileInstance.AddForce(_initialVelocity);
+        projectileInstance.AddForce(_initialVelocity, ForceMode.VelocityChange);
     }
 
     private Vector3 FindFinalVelocity(Vector3 initialVelocity, Vector3 acceleration, float time)

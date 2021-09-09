@@ -254,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 601464842}
   projectile: {fileID: 5940922232967313604, guid: 2d3b89e2a456d7844aa6a1da458e090d, type: 3}
-  airTime: 2
+  airTime: 1
 --- !u!4 &351508265
 Transform:
   m_ObjectHideFlags: 0
@@ -263,7 +263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351508263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45, y: 7.06, z: -18.65}
+  m_LocalPosition: {x: -0.45, y: 7.06, z: -26.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -355,7 +355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415695791}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 15.28, z: 0}
+  m_LocalPosition: {x: 684, y: 15, z: 726}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
