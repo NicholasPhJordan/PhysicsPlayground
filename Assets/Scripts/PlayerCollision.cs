@@ -6,13 +6,12 @@ public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
 
-    private void OnControllerColliderHit(ControllerColliderHit other)
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(other.gameObject.CompareTag("Obstacle"))
+        if(hit.gameObject.CompareTag("Killer"))
         {
-            Debug.Log("Die!!");
             _animator.enabled = false;
-
+            Debug.Log("you died bitch");
         }
     }
 }
