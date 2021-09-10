@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Killer
+  - Void
   layers:
   - Default
   - TransparentFX
