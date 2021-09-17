@@ -32,7 +32,6 @@ public class ProjectileLauncher : MonoBehaviour
         _finalVelocity = FindFinalVelocity(_initialVelocity, _acceleration, _time);
 
         Rigidbody projectileInstance =  Instantiate(projectile, transform.position, transform.rotation);
-        //projectileInstance.AddForce(_initialVelocity, ForceMode.VelocityChange);
         projectileInstance.velocity = _initialVelocity;
     }
 
@@ -49,7 +48,7 @@ public class ProjectileLauncher : MonoBehaviour
     private Vector3 FindDisplacement(Vector3 initialVelocity, Vector3 acceleration, float time)
     {
         // deltaX = v0*t + (1/2)*a*t^2
-        Vector3 displacement = initialVelocity * time + (1 / 2) * acceleration * time * time;
+        Vector3 displacement = initialVelocity * time + 0.5f * acceleration * time * time;
 
         return displacement;
     }
