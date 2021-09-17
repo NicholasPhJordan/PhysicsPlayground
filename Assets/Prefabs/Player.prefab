@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 7991041477841249961}
+  _player: {fileID: 6506286704054685134}
 --- !u!54 &1766689619
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -305,7 +306,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.35136375, y: -0.008011285, z: -0.0182337}
+  m_ConnectedAnchor: {x: -0.35136378, y: -0.008011284, z: -0.018233698}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -380,7 +381,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.3517979, y: -0.0080109425, z: 0.0051462706}
+  m_ConnectedAnchor: {x: -0.35179794, y: -0.008010942, z: 0.0051462706}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
