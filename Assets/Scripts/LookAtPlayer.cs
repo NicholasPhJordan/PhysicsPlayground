@@ -2,23 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LookAtPlayer : ProjectileLauncher
+public class LookAtPlayer : MonoBehaviour
 {
-    [SerializeField] private GameObject _lookAtTarget;
-    [SerializeField] private float _waitTime;
+    [SerializeField] private GameObject _target;
 
     void Update()
     {
-        if (_lookAtTarget)
+        if (_target)
         {
-            transform.LookAt(_lookAtTarget.transform);
+            transform.LookAt(_target.transform);
         }
-    }
-
-    IEnumerator ShootPlayer(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        LaunchProjectile();
     }
 }
