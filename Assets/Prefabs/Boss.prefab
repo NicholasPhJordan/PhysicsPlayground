@@ -94,7 +94,7 @@ SphereCollider:
   m_GameObject: {fileID: 3667745037281749783}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -111,7 +111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
-  _waitTime: 0
 --- !u!1 &4038845640826599882
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4038845640826599882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.675}
+  m_LocalPosition: {x: 0, y: 0.075, z: 0.6}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 2952820866767894692}
@@ -155,9 +154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036e546b3ca7e934c981a4a6876f3bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onPlayer: 0
   target: {fileID: 0}
   projectile: {fileID: 5940922232967313604, guid: 2d3b89e2a456d7844aa6a1da458e090d, type: 3}
   airTime: 2
+  _instantiationTimer: 2
 --- !u!1 &5048358953055215811
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5048358953055215811}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.45}
+  m_LocalPosition: {x: 0, y: 0.071, z: 0.437}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 2952820866767894692}
@@ -249,7 +250,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 5048358953055215811}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1

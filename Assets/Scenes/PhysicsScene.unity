@@ -1320,6 +1320,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8234717522902526546, guid: 7b348f8ac4234614ba35adf06014e74b, type: 3}
   m_PrefabInstance: {fileID: 1372450336}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1382680595 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2952820866767894692, guid: 5c9555d9e6cc2a64583025492eea42b0, type: 3}
+  m_PrefabInstance: {fileID: 5683406002377538989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1451156948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6506286704054685134, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
@@ -1552,6 +1557,14 @@ PrefabInstance:
     - target: {fileID: 1902100150, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.06031855
+      objectReference: {fileID: 0}
+    - target: {fileID: 751999668163979189, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1382680595}
+    - target: {fileID: 751999668163979189, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
+      propertyPath: airTime
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1473826325700705720, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
       propertyPath: player
@@ -2058,7 +2071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2952820866767894692, guid: 5c9555d9e6cc2a64583025492eea42b0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2952820866767894692, guid: 5c9555d9e6cc2a64583025492eea42b0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2106,7 +2119,7 @@ PrefabInstance:
       objectReference: {fileID: 1451156952}
     - target: {fileID: 5285723755320540674, guid: 5c9555d9e6cc2a64583025492eea42b0, type: 3}
       propertyPath: airTime
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5285723755320540674, guid: 5c9555d9e6cc2a64583025492eea42b0, type: 3}
       propertyPath: _waitTime
