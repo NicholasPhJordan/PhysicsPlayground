@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -3761961023694615899}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Killer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,4 +141,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 5940922232967313606}
-  destroyHieght: 15
+  destroyHieght: 10

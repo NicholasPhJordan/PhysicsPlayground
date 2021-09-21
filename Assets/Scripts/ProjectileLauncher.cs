@@ -4,21 +4,33 @@ using UnityEngine;
 
 public class ProjectileLauncher : MonoBehaviour
 {
+    [SerializeField] private bool _onPlayer;
     [SerializeField] private Transform target;
     [SerializeField] private Rigidbody projectile;
     [SerializeField] private float airTime = 2.0f;
+    [SerializeField] private float _instantiationTimer = 2.0f;
 
     private Vector3 _displacement = new Vector3();
     private Vector3 _acceleration = new Vector3();
     private float _time = 0.0f;
     private Vector3 _initialVelocity = new Vector3();
     private Vector3 _finalVelocity = new Vector3();
+    private float _ogTimerTime;
+
+    private void Start()
+    {
+        _ogTimerTime = _instantiationTimer;
+    }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && _onPlayer)
         {
             LaunchProjectile();
+        }
+        else if (!_onPlayer)
+        {
+            ShootPlayer();
         }
     }
 
@@ -33,6 +45,25 @@ public class ProjectileLauncher : MonoBehaviour
 
         Rigidbody projectileInstance =  Instantiate(projectile, transform.position, transform.rotation);
         projectileInstance.velocity = _initialVelocity;
+    }
+
+    public void ShootPlayer()
+    {
+        _instantiationTimer -= Time.deltaTime;
+
+        _displacement = target.position - transform.position;
+        _acceleration = Physics.gravity;
+        _time = airTime;
+        _initialVelocity = FindInitialVelocity(_displacement, _acceleration, _time);
+        _finalVelocity = FindFinalVelocity(_initialVelocity, _acceleration, _time);
+
+        if (_instantiationTimer <= 0)
+        {
+            Rigidbody projectileInstance = Instantiate(projectile, transform.position, transform.rotation);
+            projectileInstance.velocity = _initialVelocity;
+
+            _instantiationTimer = _ogTimerTime;
+        }
     }
 
     // FIND FUNCTIONS 
