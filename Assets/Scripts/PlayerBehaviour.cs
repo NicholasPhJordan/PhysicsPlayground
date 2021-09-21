@@ -16,7 +16,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private Animator _animator;
 
     private Vector3 _desiredVelocity;
-    private Vector3 _airvelocity;
+    private Vector3 _airVelocity;
     private bool _jumpIsDesired = false;
     private bool _isGrounded = false;
 
@@ -66,24 +66,24 @@ public class PlayerBehaviour : MonoBehaviour
             _animator.SetFloat("Speed", _desiredVelocity.magnitude / _speed);
         }
         _animator.SetBool("Jump", !_isGrounded);
-        _animator.SetFloat("VerticalSpeed", )
+        _animator.SetFloat("VerticalSpeed", _airVelocity.y / _jumpStrength);
 
         //Apply jump strength 
         if (_jumpIsDesired && _isGrounded)
         {
-            _airvelocity.y = _jumpStrength;
+            _airVelocity.y = _jumpStrength;
             _jumpIsDesired = false;
         }
 
         //Stop on ground
-        if (_isGrounded && _airvelocity.y < 0.0f)
-            _airvelocity.y = -1.0f;
+        if (_isGrounded && _airVelocity.y < 0.0f)
+            _airVelocity.y = -1.0f;
 
         //Apply Gravity
-        _airvelocity += Physics.gravity * _gravityModifier * Time.deltaTime;
+        _airVelocity += Physics.gravity * _gravityModifier * Time.deltaTime;
 
         //Add air velocity
-        _desiredVelocity += _airvelocity;
+        _desiredVelocity += _airVelocity;
 
         //Move
         _controller.Move(_desiredVelocity * Time.deltaTime);
