@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4519239805573387586}
   - component: {fileID: 3178407129941137400}
   - component: {fileID: 2018812213104494791}
+  - component: {fileID: 8972037674035184699}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +95,7 @@ SphereCollider:
   m_GameObject: {fileID: 3667745037281749783}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -111,7 +112,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
-  _waitTime: 0
+--- !u!114 &8972037674035184699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3667745037281749783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4380ad0d91080b84b90a6c8b6768f91e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  maxHealth: 100
 --- !u!1 &4038845640826599882
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4038845640826599882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.675}
+  m_LocalPosition: {x: 0, y: 0.075, z: 0.6}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 2952820866767894692}
@@ -155,9 +169,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036e546b3ca7e934c981a4a6876f3bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onPlayer: 0
   target: {fileID: 0}
   projectile: {fileID: 5940922232967313604, guid: 2d3b89e2a456d7844aa6a1da458e090d, type: 3}
   airTime: 2
+  _instantiationTimer: 2
 --- !u!1 &5048358953055215811
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +188,7 @@ GameObject:
   - component: {fileID: 5095785008015008892}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5048358953055215811}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.45}
+  m_LocalPosition: {x: 0, y: 0.071, z: 0.437}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 2952820866767894692}
@@ -249,7 +265,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 5048358953055215811}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1

@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class ProjectileLauncher : MonoBehaviour
 {
+    [Tooltip("Check if script is on the Player")]
     [SerializeField] private bool _onPlayer;
+    [Space]
     [SerializeField] private Transform target;
     [SerializeField] private Rigidbody projectile;
     [SerializeField] private float airTime = 2.0f;
+    [Tooltip("The time in-between Shots for Non-Player Objects")]
     [SerializeField] private float _instantiationTimer = 2.0f;
 
     private Vector3 _displacement = new Vector3();
@@ -24,6 +27,16 @@ public class ProjectileLauncher : MonoBehaviour
 
     private void Update()
     {
+        if (_onPlayer)
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                target = hit.transform;
+            }
+        }
+
         if (Input.GetMouseButtonDown(0) && _onPlayer)
         {
             LaunchProjectile();
@@ -47,6 +60,7 @@ public class ProjectileLauncher : MonoBehaviour
         projectileInstance.velocity = _initialVelocity;
     }
 
+    //Same as LaunchProjectile, but with a timer on shooting
     public void ShootPlayer()
     {
         _instantiationTimer -= Time.deltaTime;
