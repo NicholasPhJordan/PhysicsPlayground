@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4519239805573387586}
   - component: {fileID: 3178407129941137400}
   - component: {fileID: 2018812213104494791}
+  - component: {fileID: 8972037674035184699}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,6 +112,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
+--- !u!114 &8972037674035184699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3667745037281749783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4380ad0d91080b84b90a6c8b6768f91e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  maxHealth: 100
 --- !u!1 &4038845640826599882
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +188,7 @@ GameObject:
   - component: {fileID: 5095785008015008892}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

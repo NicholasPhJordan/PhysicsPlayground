@@ -14,4 +14,12 @@ public class ProjectileBehaviour : MonoBehaviour
             Destroy(projectile);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Boss"))
+        {
+            Destroy(projectile);
+        }
+    }
 }

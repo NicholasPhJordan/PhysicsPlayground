@@ -5,14 +5,18 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
+    [SerializeField] private PlayerBehaviour _script;
     [SerializeField] private GameObject _player;
+    [SerializeField] private HealthBehaviour healthBar;
+    [SerializeField] public float maxHealth;
 
-    private bool _playerScript;
+    private float health;
     private Vector3 _homePos;
 
     private void Start()
     {
-        _playerScript = _player.GetComponent<PlayerBehaviour>().enabled;
+        health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     private void Update()
@@ -20,7 +24,12 @@ public class PlayerCollision : MonoBehaviour
         if (_player.transform.position.y <= 20.0f)
         {
             _animator.enabled = false;
-            _playerScript = false;
+        }
+
+        if (health <= 0.0f)
+        {
+            _animator.enabled = false;
+            _script.enabled = false;
         }
     }
 
@@ -28,8 +37,9 @@ public class PlayerCollision : MonoBehaviour
     {
         if (hit.gameObject.CompareTag("Killer"))
         {
-            _animator.enabled = false;
-            _playerScript = false;
+            Destroy(hit.gameObject);
+            health -= 10.0f;
+            healthBar.SetHealth(health);
         }
         else if (hit.gameObject.CompareTag("Platform"))
         {
@@ -38,6 +48,8 @@ public class PlayerCollision : MonoBehaviour
         }
         else if (hit.gameObject.CompareTag("Void"))
         {
+            health -= 20.0f;
+            healthBar.SetHealth(health);
             _player.transform.position = _homePos;
             _animator.enabled = true;
         }
