@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class PlayerCollision : MonoBehaviour
         {
             _animator.enabled = false;
             _script.enabled = false;
+            Invoke("LoadNextScene", 2.0f);
         }
     }
 
@@ -53,5 +55,10 @@ public class PlayerCollision : MonoBehaviour
             _player.transform.position = _homePos;
             _animator.enabled = true;
         }
+    }
+
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
