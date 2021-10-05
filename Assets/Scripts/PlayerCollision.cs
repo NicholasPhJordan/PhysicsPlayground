@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour
 {
+    [SerializeField] private bool _onCapsule;
     [SerializeField] private Animator _animator;
     [SerializeField] private PlayerBehaviour _script;
     [SerializeField] private GameObject _player;
@@ -37,13 +38,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.CompareTag("Killer"))
-        {
-            Destroy(hit.gameObject);
-            health -= 10.0f;
-            healthBar.SetHealth(health);
-        }
-        else if (hit.gameObject.CompareTag("Platform"))
+        if (hit.gameObject.CompareTag("Platform"))
         {
             _homePos = _player.transform.position;
             _homePos.y += 1;
@@ -54,6 +49,16 @@ public class PlayerCollision : MonoBehaviour
             healthBar.SetHealth(health);
             _player.transform.position = _homePos;
             _animator.enabled = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (_onCapsule && other.gameObject.CompareTag("Killer"))
+        {
+            Destroy(other.gameObject);
+            health -= 10.0f;
+            healthBar.SetHealth(health);
         }
     }
 

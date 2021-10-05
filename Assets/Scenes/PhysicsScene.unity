@@ -2092,6 +2092,22 @@ PrefabInstance:
       propertyPath: _emptyTarget
       value: 
       objectReference: {fileID: 3941493200636767943, guid: 52048d8c84088a8469dfe745cc023e60, type: 3}
+    - target: {fileID: 2842382706647906329, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1207425603}
+    - target: {fileID: 2842382706647906329, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
+      propertyPath: _onCapsule
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842382706647906329, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842382706647906329, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
+      propertyPath: _script
+      value: 
+      objectReference: {fileID: 1451156950}
     - target: {fileID: 6409477355286896402, guid: 0ce7573bb7586ee4ab7b1a3688501130, type: 3}
       propertyPath: _playerCamera
       value: 
